@@ -53,7 +53,7 @@ const MainNavigator = createStackNavigator({
   Home: {
     screen: Tabs,
     navigationOptions: {
-      header: null
+      header: <UdaciStatusBar backgroundColor={purple} barStyle="light-content" />
     },
   },
   EntryDetail: {
@@ -72,7 +72,6 @@ export default class App extends React.Component {
     return (
       <Provider store={createStore(reducer)}>
         <View style={{ flex: 1 }}>
-          <UdaciStatusBar backgroundColor={purple} barStyle="light-content" />
           <MainNavigator />
         </View>
       </Provider>
