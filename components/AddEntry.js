@@ -69,7 +69,7 @@ class AddEntry extends Component {
 
     this.setState(() => ({ run: 0, bike: 0, swim: 0, sleep: 0, eat: 0 }))
 
-    // Navigate to home
+    this.props.navigation.goBack();
 
     submitEntry({ key, entry })
 
@@ -82,7 +82,7 @@ class AddEntry extends Component {
       [key]: getDailyReminderValue()
     }))
 
-    // Route to Home
+    this.props.navigation.goBack();
 
     removeEntry(key)
   }
